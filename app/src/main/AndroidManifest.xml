@@ -50,6 +50,7 @@
         <activity
             android:name=".authenticator.LDAPAuthenticatorActivity"
             android:excludeFromRecents="true"
+            android:exported="true"
             android:label="@string/ui_activity_title"
             android:windowSoftInputMode="stateVisible|adjustResize">
             <intent-filter>
@@ -61,8 +62,10 @@
                 <data android:scheme="ldaps" />
             </intent-filter>
         </activity>
-        <activity android:name=".authenticator.AccountSettingsActivity"></activity>
-        <activity android:name=".authenticator.AccountsListActivity">
+        <activity android:name=".authenticator.AccountSettingsActivity" />
+        <activity
+            android:name=".authenticator.AccountsListActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -90,7 +93,7 @@
             android:excludeFromRecents="true"
             android:label="UF Phonebook Sync Error"
             android:launchMode="singleTask"
-            android:taskAffinity=""></activity>
+            android:taskAffinity="" />
         <activity
             android:name=".activity.SettingsActivity"
             android:label="@string/title_activity_settings"
